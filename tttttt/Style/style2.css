@@ -1,0 +1,52 @@
+@font-face {
+font-family: "uicons-bold-rounded";
+src: url("https://cdn-uicons.flaticon.com/uicons-bold-rounded/webfonts/uicons-bold-rounded.eot#iefix") format("embedded-opentype"),
+url("https://cdn-uicons.flaticon.com/uicons-bold-rounded/webfonts/uicons-bold-rounded.woff2") format("woff2"),
+url("https://cdn-uicons.flaticon.com/uicons-bold-rounded/webfonts/uicons-bold-rounded.woff") format("woff");
+}
+@font-face {
+font-family: "uicons-brands";
+src: url("https://cdn-uicons.flaticon.com/uicons-brands/webfonts/uicons-brands.eot#iefix") format("embedded-opentype"),
+url("https://cdn-uicons.flaticon.com/uicons-brands/webfonts/uicons-brands.woff2") format("woff2"),
+url("https://cdn-uicons.flaticon.com/uicons-brands/webfonts/uicons-brands.woff") format("woff");
+}
+
+
+    i[class^="fi-br-"]:before, i[class*=" fi-br-"]:before, span[class^="fi-br-"]:before, span[class*="fi-br-"]:before {
+font-family: uicons-bold-rounded !important;
+font-style: normal;
+font-weight: normal !important;
+font-variant: normal;
+text-transform: none;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+
+
+    i[class^="fi-brands-"]:before, i[class*=" fi-brands-"]:before, span[class^="fi-brands-"]:before, span[class*="fi-brands-"]:before {
+font-family: uicons-brands !important;
+font-style: normal;
+font-weight: normal !important;
+font-variant: normal;
+text-transform: none;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+.fi-br-stethoscope:before {
+    content: "\f4a9";
+    }
+.fi-brands-facebook-messenger:before {
+    content: "\f14e";
+    }
+.fi-brands-twitter:before {
+    content: "\f1b7";
+    }
+.fi-brands-instagram:before {
+    content: "\f169";
+    }
+.fi-brands-facebook:before {
+    content: "\f14f";
+    }

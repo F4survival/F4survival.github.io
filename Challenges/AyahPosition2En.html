@@ -1,0 +1,680 @@
+<head>
+    <meta charset="utf-8" dir="ltr" lang="en">
+    <title>Verse place Quiz 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Holy Quran Quizzes is a site that provides you with many challenges from the Quran and aims to teach the Islamic religion and facilitate learning information about the Quran for Muslims through fun games and challenges">
+    <meta name="keywords" content="quran,koran,quran recitation,surah,coran,quran surah,sleep quran,quran all surah,al quran,quran kids,holy quran,kuran,learn quran,qur'an,quran (book),quran for kids,tilawat e quran,quran al baqarah,surah yasin,quran 20 surah,#quran,quran in,quran for children,kuran kerim,kuran rukje,teach quran for kids,the quran,mp3 quran,quran recitation really beautiful,alquran,quranic">
+      
+    <meta property="og:image" content="https://e.top4top.io/p_24296aopa1.jpg">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="تحديات من القرآن - Quran Quizzes">
+    <meta name="twitter:description" content="The Holy Quran Quizzes is a site that provides you with many challenges from the Quran and aims to teach the Islamic religion and facilitate learning information about the Quran for Muslims through fun games and challenges">
+    <meta name="twitter:image" content="https://e.top4top.io/p_24296aopa1.jpg">
+    <meta name="twitter:site" content="@www.quran-quizzes.net">
+    <meta name="twitter:creator" content="@f4survival">
+      	
+  	<meta property="og:title" content="تحديات من القرآن - Quran Quizzes">
+    <meta property="og:description" content= "The Holy Quran Quizzes is a site that provides you with many challenges from the Quran and aims to teach the Islamic religion and facilitate learning information about the Quran for Muslims through fun games and challenges">
+  	<meta property="og:url" content="www.quran-quizzes.net">
+  	<meta property="og:image" content="https://e.top4top.io/p_24296aopa1.jpg">
+    <meta property="og:image:secure_url" content="https://e.top4top.io/p_24296aopa1.jpg"> 
+  	<meta property="fb:app_id" content="1077180459563976">
+  	<meta property="og:image:type" content="image/png"> 
+    <meta property="og:image:width" content="400">  
+    <meta property="og:image:height" content="300">
+    <meta property="og:type" content="website"> 
+      
+    <link rel="icon" href="">
+    <link rel="shortcut" href="">
+    <link rel="apple-touch-icon" href="">
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.28/sweetalert2.css" integrity="sha512-aNZkM/JhVXzcEdwmFm6Zg0tPZNZb+e/2xmYduDayY/NJ2JgiC6XcCCk4u941r8/ZsmoIZPgwO8WY7YVwrLihLA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.28/sweetalert2.min.js" integrity="sha512-vBXZW60oYiantQ/5hVVhYcpt/jbHXsTG3La1EtR3/IxfbXxt++pqBU/ZnAPQZi6JbkWJNtPqnQrIqaI3e9BB7g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+</head>
+
+<body onload="start()" onselectstart="return false">
+    <div class="i2"><i onclick="openMenu()" class="fi fi-rr-menu-burger"></i></div>
+    <nav id="nav">
+        <i onclick="reportUs()" id="report" class="fi fi-rr-exclamation"><br><span style="font-size: 12px">Report</span></i>
+        <i onclick="translatePage()" class="fi fi-rr-subtitles"><br><span style="font-size: 12px">English</span></i>
+        <i onclick="contact()" class="fi fi-rr-envelope-plus"><br><span style="font-size: 12px">Contact</span></i>
+        <i onclick="darkmode()" id="mode" class="fi fi-rr-moon-stars"><br><span style="font-size: 12px">Mode</span></i>
+    </nav>
+    <section onclick="closeMenu()" id="container" class="container">
+        <div class="box" id="text">
+            <div class="img">
+                <img id="loading" src="Img/loading.gif">
+            </div>
+            <div dir="rtl" class="surahname" id="surahname">Search for verse..</div>
+            <div class="answers" dir="rtl">
+                <div><button name="btn" class="btn link" onclick="testsurah(this.value)" value="">Searching..</button></div>
+                <div><button name="btn" class="btn link" onclick="testsurah(this.value)" value="">Searching..</button></div>
+                <div><button name="btn" class="btn link" onclick="testsurah(this.value)" value="">Searching..</button></div>
+                <div><button name="btn" class="btn link" onclick="testsurah(this.value)" value="">Searching..</button></div>
+            </div>
+        </div>
+        <div class="outherSurah"><a id="outherSurah" onclick="start()">Search for another verse</a></div>
+    </section>
+    <div class="i"><i onclick="window.location.href = '../Quran_layout3En.html'" class="fi fi-rr-arrow-small-left"></i></div>
+</body>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=El+Messiri&display=swap');
+    :root {
+    color-scheme: light dark;
+        --color1: #9ed2bb;
+		--color2: #FFFFFF;
+        
+        --color3: #FFFFFF;
+        --color4: #000000;
+        --color5: #000000;
+        
+        --bgcolor1: #f5f5f5;
+        --bgcolor2: #FFFFFF;
+        --box: rgba(158, 210, 187, 0.25) 0px 8px 24px;
+        --img: url(Img/bg.svg);
+    }
+    @media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: light dark;
+            --color1: #F9D342;
+		    --color2: #FFFFFF;
+        
+            --color3: #000000;
+            --color4: #FFFFFF;
+            --color5: #000000;
+        
+            --bgcolor1: #2F2E2A;
+            --bgcolor2: #808080;
+            --box: rgba(249, 211, 66, 0.3) 0px 2px 8px 0px;
+            --img: url(Img/bgdark.svg);
+        }
+    }
+    @font-face {
+        font-family: "uicons-regular-rounded";
+        src: url("https://cdn-uicons.flaticon.com/uicons-regular-rounded/webfonts/uicons-regular-rounded.eot#iefix") format("embedded-opentype"),
+        url("https://cdn-uicons.flaticon.com/uicons-regular-rounded/webfonts/uicons-regular-rounded.woff2") format("woff2"),
+        url("https://cdn-uicons.flaticon.com/uicons-regular-rounded/webfonts/uicons-regular-rounded.woff") format("woff");
+        }
+
+            i[class^="fi-rr-"]:before, i[class*=" fi-rr-"]:before, span[class^="fi-rr-"]:before, span[class*="fi-rr-"]:before {
+        font-family: uicons-regular-rounded !important;
+        font-style: normal;
+        font-weight: normal !important;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+  	.fi-rr-arrow-small-left:before {
+    	content: "\f14d";
+    }
+  	.i{
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 24px;
+        border: 1px solid;
+        border-color: var(--color1);
+        color: var(--color4);
+        padding: 8px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    body{
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        font-family: 'El Messiri', sans-serif;
+        background-color: var(--bgcolor1);
+    }
+    .i:active,.i2:active{
+        background-color: var(--color1);
+    }
+    /*******************/
+    .i2{
+        display: none;
+    }
+    nav{
+        z-index: 100;
+        position: absolute;
+        right: 0;
+        top: 20%;
+        height: 60%;
+        width: 90px;
+        transform: translate3d(5px,0px,0px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: center;
+    }
+    nav i{
+        display: grid;
+        justify-items: center;
+        grid-template-rows: 28px 5px;
+        font-size: 22px;
+        padding: 15px 0px;
+        cursor: pointer;
+    }
+    nav i:hover{
+        color: var(--color1);
+    }
+    /*******************/
+    button{
+        font-family: 'El Messiri', sans-serif;
+        all:unset;
+        cursor: pointer;
+    }
+    .container{
+        display: grid;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        height: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 85% 15%;
+    }
+    .box{
+        overflow: hidden;
+        height: 400px;
+        width: 72%;
+        display: grid;
+        grid-template-rows: 35% 35% 30%;
+        background-image: var(--img);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 25px;
+        background-color: var(--bgcolor1);
+        box-shadow: var(--box);
+        border: 0.01em solid;
+        border-color: var(--color1);
+    }
+    .img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .img img{
+        transition: 1.5s;
+        height: 150px;
+        width: 200px;
+    }
+    .surahname{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: center;
+        font-size: 16px;
+        letter-spacing: 1px;
+        color: var(--dark);
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        height: 100px;
+        overflow-y: scroll;
+    }
+    .surahname::-webkit-scrollbar {
+        width: 7px;
+    }
+    .surahname::-webkit-scrollbar-track {
+        background-color: rgba(0,0,0,0);
+    }
+    .surahname::-webkit-scrollbar-thumb {
+        background-color: var(--color1);
+        border-radius: 15px;
+    }
+    .answers{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 50% 50%;
+        text-align: center;
+    }
+    .btn{
+        margin-bottom: 50px;
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        color: var(--color2);
+        border: 1.5px solid;
+        border-color: var(--color2);
+        border-radius: 25px;
+        width: 40%;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 8px 25px;
+    }
+    .outherSurah a{
+        color: var(--color4);
+        padding: 10px 25px;
+        border: 1.5px solid;
+        border-color: var(--color1);
+        border-radius: 25px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    .outherSurah a:hover{
+        transition: 0.45s;
+        background-color: var(--color1);
+    }
+    .outherSurah a:active{
+        background-color: var(--color1);
+    }
+    @media (max-width: 550px){
+        body{
+            max-height: 100vh;
+            overflow: hidden;
+        }
+      	.i{
+            cursor: default;
+        }
+        .container{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            height: 100%;
+        }
+        .box{
+            overflow: hidden;
+            height: 500px;
+            width: 300px;
+            display: grid;
+            grid-template-rows: 35% 35% 30%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            border-radius: 25px;
+        }
+        .surahname{
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            text-align: center;
+            font-size: 16px;
+            letter-spacing: 1px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+            height: 100px;
+            overflow-y: scroll;
+        }
+        .surahname::-webkit-scrollbar {
+            width: 0px;
+        }
+        .outherSurah{
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            width: 100%;
+            margin: 0;
+            position: absolute;
+            bottom: 10%;
+        }
+        .outherSurah a{
+            padding: 10px 25px;
+            border: 1px solid;
+            border-radius: 25px;
+            font-size: 14px;
+            cursor: pointer;
+            border-color: var(--color1);
+        }
+        .btn{
+            margin-bottom: 50px;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            border: 1.3px solid;
+            border-radius: 25px;
+            width: 70%;
+            margin-right: auto;
+            margin-left: auto;
+            padding: 8px 5px;
+        }
+        .i2{
+            display: block;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 2;
+            font-size: 24px;
+            background-color: var(--light);
+            padding: 8px;
+            border-radius: 50%;
+            cursor: default;
+            box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
+            border: 1px solid;
+            border-color: var(--color1);
+            height: 26px;
+            width: 26px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .i2 i{
+            font-size: 18px;
+        }
+        .start{
+            margin-bottom: 15px;
+        }
+        
+        /*******************/
+        nav{
+            position: absolute;
+            top: auto;
+            bottom: 0;
+            height: 90px;
+            width: 100%;
+            background-color: var(--bgcolor1);
+            border-radius: 0px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            transform: translate3d(0px,150px,0px);
+            display: flex;
+            flex-direction: row;
+            cursor: default;
+            justify-content: space-evenly;
+            align-items: center;
+            align-content: center;
+            border-top: 1.5px solid;
+            border-color: var(--color1);
+        }
+        nav i{
+            display: grid;
+            justify-items: center;
+            grid-template-rows: 28px 5px;
+            font-size: 22px;
+            padding: 0px 10px;
+        }
+        nav i:hover{
+            color: var(--color1);
+        }
+        /*******************/
+    }
+</style>
+<script>
+    
+    var ayah_number,juz,positionPage,numberInSurah,surahNumber;
+    
+    /* function start */
+    function start()
+        {
+            randomAyahs = Math.floor(Math.random() * 6236) + 1;
+            let url = "https://api.alquran.cloud/v1/ayah/"+randomAyahs+"/en.asad";
+            fetch(url)
+                .then(response => response.json())
+                .then(response => getData(response.data))
+                .catch(err => console.error(err));
+            
+            document.getElementById("loading").style.transition="0s";
+            document.getElementById("loading").style.transform="translateY(-10px)";
+            document.getElementById("surahname").innerHTML="<div>..search for verse</div>";
+        }
+    
+    function getData(data)
+        {
+            console.log(data);
+            let surah_name_ar = data.surah.englishNameTranslation;
+            let surah_content = data.text;
+            ayah_number = data.number;
+            juz = data.juz;
+            positionPage = data.page;
+            numberInSurah = data.numberInSurah;
+            surahNumber = data.surah.number;
+            noRepeat();
+            
+            document.getElementById("surahname").innerHTML = "<div> Surah : " + String(surah_name_ar) + "<br> verse : " + surah_content + "</div>";
+            document.getElementById("loading").style.transition="1.5s";
+            document.getElementById("loading").style.transform="translateY(-150px)";
+        }
+    
+    function noRepeat()
+        {
+            let random_ayah = [];
+            let correct = Math.floor(Math.random() * 4);
+            
+            for (let i=0;i<4;i++)
+                {
+                    random_ayah[i] = Math.floor(Math.random() * 6236) + 1;
+                    if (random_ayah[i]==ayah_number)
+                        {
+                            noRepeat();
+                        }
+                    else
+                        {
+                            random_ayah[correct]=ayah_number;
+                            document.getElementsByClassName("btn")[i].innerHTML=random_ayah[i];
+                            document.getElementsByClassName("btn")[i].value=random_ayah[i];
+                        }
+                }
+        }
+    
+
+    function testsurah(i)
+        {
+            let color;
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {color='#F9D342'}else{color='#9ed2bb'}
+            i=parseInt(i);
+            if (i==ayah_number)
+                {
+                    Swal.fire({
+                      title: 'Well done',
+                      html: "Your answer is correct, this verse is located in the section : "+ juz + "<br>And on page : "+ positionPage +"<br> And the verse number in the surah is : "+ numberInSurah +"<br> and the order of the surah in the Quran: " + surahNumber,
+                      icon: 'success',
+                      showCancelButton: false,
+                      confirmButtonColor: color
+                    })
+                }
+                else
+                    {
+                        Swal.fire({
+                          title: 'Unfortunately',
+                          text: "You made a mistake, try again with another wall, and don't despair",
+                          icon: 'error',
+                          showCancelButton: false,
+                          confirmButtonColor: color
+                        })
+                    }
+        }
+    
+</script>
+<script>
+    var link = document.getElementsByClassName('link');
+    if (window.matchMedia("(min-width: 550px)").matches) 
+        {}
+        else
+            {
+                for (var i=0; i<link.length; i++)
+                    {
+                        link[i].style.cursor="default";
+                    }
+                document.getElementById("outherSurah").style.cursor="default";
+                document.getElementById("outherSurah").style.bottom="5%";
+            }
+</script>
+
+<script>
+    let nav = document.getElementById("nav");
+    
+    let test=false,openph="transform: translate3d(0px,0px,0px);transition: all 0.46s;",closeph="transform: translate3d(0px,150px,0px);transition: all 0.8s;";
+    function openMenu()
+        {
+            
+    if (window.matchMedia("(min-width: 600px)").matches) 
+        {
+            
+        } 
+        else 
+            {
+                if (test==false)
+                    {
+                        nav.style=openph;
+                        test=true;
+                    }
+                    else
+                        {
+                            nav.style=closeph;
+                            test=false;
+                        }
+            }
+            
+        }
+    function closeMenu()
+        {
+            if (window.matchMedia("(min-width: 600px)").matches) 
+                {
+
+                } 
+                else
+                    {
+                        nav.style=closeph;
+                        test=false;
+                    }
+        }
+</script>
+
+<script>
+    let color;
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {color='#F9D342'}else{color='#9ed2bb'}
+    
+    function contact()
+        {
+            Swal.fire({
+                    title: "Hey wait",
+                    html: "You will now be transferred to the Gmail to contact us. You can cancel the order if you do not wish to do so",
+                    showDenyButton: false,
+                    showCancelButton: true,
+                    confirmButtonText: 'Moving in',
+                    cancelButtonText: 'Cancel',
+                    reverseButtons: false,
+                    cancelButtonColor: '#d9d7d7',
+                    confirmButtonColor: color
+                    }).then((result) => 
+                        {
+                            if (result.isConfirmed) 
+                                {
+                                    window.location.href = "mailto:support@biskradz.com?subject=topic about : &body=Hey, you! You can put the description of the topic below. Greetings from quran-quizzes.net team &cc=f4survival@gmail.com";
+                                }else
+                                    {
+                                        Swal.fire({
+                                        text: 'You have canceled',
+                                        icon: 'success',
+                                        showConfirmButton: false,
+                                        showCancelButton: false,
+                                        confirmButtonColor: color
+                                        })
+                                    }
+                        })
+            }
+    
+</script>
+
+<script>
+    
+    function reportUs()
+        {
+            Swal.fire({
+                    title: "Hey wait",
+                    html: "You are now reporting because of a problem on the page, so we ask you <br> If the problem is in the form of the site or something that needs a lengthy explanation, send us an e-mail, and if there is a glitch in one of the challenges, click on Report",
+                    showDenyButton: false,
+                    showCancelButton: true,
+                    confirmButtonText: 'Report',
+                    cancelButtonText: 'Cancel',
+                    reverseButtons: false,
+                    cancelButtonColor: '#d9d7d7',
+                    confirmButtonColor: color
+                    }).then((result) => 
+                        {
+                            if (result.isConfirmed) 
+                                {
+                                    Swal.fire({
+                                        text: 'Your report has been sent and it will be looked into, allah willing. Thank you',
+                                        icon: 'success',
+                                        showConfirmButton: false,
+                                        showCancelButton: false,
+                                        confirmButtonColor: color
+                                        })
+                                }else
+                                    {
+                                        Swal.fire({
+                                        text: 'You have canceled',
+                                        icon: 'success',
+                                        showConfirmButton: false,
+                                        showCancelButton: false,
+                                        confirmButtonColor: color
+                                        })
+                                    }
+                        })
+            }
+    
+</script>
+
+<script>
+    
+    function translatePage()
+        {
+            Swal.fire({
+                    title: "Hey wait",
+                    html: "You are now converting to Arabic, everything will be converted to Arabic, even verses and others",
+                    showDenyButton: false,
+                    showCancelButton: true,
+                    confirmButtonText: 'Transformation',
+                    cancelButtonText: 'Cancel',
+                    reverseButtons: false,
+                    cancelButtonColor: '#d9d7d7',
+                    confirmButtonColor: color
+                    }).then((result) => 
+                        {
+                            if (result.isConfirmed) 
+                                {
+                                    window.location.href = "AyahPosition2.html";
+                                }else
+                                    {
+                                        Swal.fire({
+                                        text: 'You have canceled',
+                                        icon: 'success',
+                                        showConfirmButton: false,
+                                        showCancelButton: false,
+                                        confirmButtonColor: color
+                                        })
+                                    }
+                        })
+            }
+    
+</script>
+
+<script>
+    function darkmode()
+        {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) 
+                {
+                    Swal.fire({
+                                        text: 'Turn off the dark mode from your phone to return to the white theme',
+                                        icon: 'success',
+                                        showConfirmButton: false,
+                                        showCancelButton: false,
+                                        confirmButtonColor: color
+                                        })
+                }
+            else{
+                    Swal.fire({
+                                        text: 'Turn on the dark mode from your phone to go to the black theme',
+                                        icon: 'success',
+                                        showConfirmButton: false,
+                                        showCancelButton: false,
+                                        confirmButtonColor: color
+                                        })
+                }
+        }
+</script>
